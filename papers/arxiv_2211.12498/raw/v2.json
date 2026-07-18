@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2211.12498",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2211.12498",
+  "source_version": 2,
+  "metadata": {
+    "paper_uid": "arxiv:2211.12498",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2211.12498",
+    "paper_arxiv_version": 2,
+    "paper_doi": "",
+    "paper_title": "Touch and Go: Learning from Human-Collected Vision and Touch",
+    "paper_authors": [
+      "Fengyu Yang",
+      "Chenyang Ma",
+      "Jiacheng Zhang",
+      "Jing Zhu",
+      "Wenzhen Yuan",
+      "Andrew Owens"
+    ],
+    "paper_first_author": "Fengyu Yang",
+    "paper_year": 2022,
+    "paper_submitted_date": "2022-11-22",
+    "paper_updated_date": "2022-11-29",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.CV",
+    "paper_categories": [
+      "cs.CV"
+    ],
+    "paper_abstract": "The ability to associate touch with sight is essential for tasks that require physically interacting with objects in the world. We propose a dataset with paired visual and tactile data called Touch and Go, in which human data collectors probe objects in natural environments using tactile sensors, while simultaneously recording egocentric video. In contrast to previous efforts, which have largely been confined to lab settings or simulated environments, our dataset spans a large number of \"in the wild\" objects and scenes. To demonstrate our dataset's effectiveness, we successfully apply it to a variety of tasks: 1) self-supervised visuo-tactile feature learning, 2) tactile-driven image stylization, i.e., making the visual appearance of an object more consistent with a given tactile signal, and 3) predicting future frames of a tactile signal from visuo-tactile inputs.",
+    "paper_pdf_url": "https://arxiv.org/pdf/2211.12498v2",
+    "paper_abs_url": "https://arxiv.org/abs/2211.12498v2",
+    "paper_project_url": "https://touch-and-go.github.io",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "ec2d7627a8d8dc37507db8bc9aea51fadbe5410a55c0b43dafc3004a3b12dff4",
+  "extracted_text_sha256": ""
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2401.18084",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2401.18084",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:2401.18084",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2401.18084",
+    "paper_arxiv_version": 1,
+    "paper_doi": "",
+    "paper_title": "Binding Touch to Everything: Learning Unified Multimodal Tactile Representations",
+    "paper_authors": [
+      "Fengyu Yang",
+      "Chao Feng",
+      "Ziyang Chen",
+      "Hyoungseob Park",
+      "Daniel Wang",
+      "Yiming Dou",
+      "Ziyao Zeng",
+      "Xien Chen",
+      "Rit Gangopadhyay",
+      "Andrew Owens",
+      "Alex Wong"
+    ],
+    "paper_first_author": "Fengyu Yang",
+    "paper_year": 2024,
+    "paper_submitted_date": "2024-01-31",
+    "paper_updated_date": "2024-01-31",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.CV",
+    "paper_categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "paper_abstract": "The ability to associate touch with other modalities has huge implications for humans and computational systems. However, multimodal learning with touch remains challenging due to the expensive data collection process and non-standardized sensor outputs. We introduce UniTouch, a unified tactile model for vision-based touch sensors connected to multiple modalities, including vision, language, and sound. We achieve this by aligning our UniTouch embeddings to pretrained image embeddings already associated with a variety of other modalities. We further propose learnable sensor-specific tokens, allowing the model to learn from a set of heterogeneous tactile sensors, all at the same time. UniTouch is capable of conducting various touch sensing tasks in the zero-shot setting, from robot grasping prediction to touch image question answering. To the best of our knowledge, UniTouch is the first to demonstrate such capabilities. Project page: https://cfeng16.github.io/UniTouch/",
+    "paper_pdf_url": "https://arxiv.org/pdf/2401.18084v1",
+    "paper_abs_url": "https://arxiv.org/abs/2401.18084v1",
+    "paper_project_url": "https://cfeng16.github.io/UniTouch/",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "33c8430569d609e19e7921dd37d9a88a5c9b2fcdb44482ac06eb271941661a25",
+  "extracted_text_sha256": ""
+}

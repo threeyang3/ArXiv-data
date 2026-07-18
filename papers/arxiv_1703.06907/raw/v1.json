@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:1703.06907",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "1703.06907",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:1703.06907",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "1703.06907",
+    "paper_arxiv_version": 1,
+    "paper_doi": "",
+    "paper_title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
+    "paper_authors": [
+      "Josh Tobin",
+      "Rachel Fong",
+      "Alex Ray",
+      "Jonas Schneider",
+      "Wojciech Zaremba",
+      "Pieter Abbeel"
+    ],
+    "paper_first_author": "Josh Tobin",
+    "paper_year": 2017,
+    "paper_submitted_date": "2017-03-20",
+    "paper_updated_date": "2017-03-20",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "paper_abstract": "Bridging the 'reality gap' that separates simulated robotics from experiments on hardware could accelerate robotic research through improved data availability. This paper explores domain randomization, a simple technique for training models on simulated images that transfer to real images by randomizing rendering in the simulator. With enough variability in the simulator, the real world may appear to the model as just another variation. We focus on the task of object localization, which is a stepping stone to general robotic manipulation skills. We find that it is possible to train a real-world object detector that is accurate to $1.5$cm and robust to distractors and partial occlusions using only data from a simulator with non-realistic random textures. To demonstrate the capabilities of our detectors, we show they can be used to perform grasping in a cluttered environment. To our knowledge, this is the first successful transfer of a deep neural network trained only on simulated RGB images (without pre-training on real images) to the real world for the purpose of robotic control.",
+    "paper_pdf_url": "https://arxiv.org/pdf/1703.06907v1",
+    "paper_abs_url": "https://arxiv.org/abs/1703.06907v1",
+    "paper_project_url": "https://sites.google.com/view/",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "3fc98c5f4cea050686d45858e647e1b704492121fdae80f8fcd5d560c107f11f",
+  "extracted_text_sha256": ""
+}

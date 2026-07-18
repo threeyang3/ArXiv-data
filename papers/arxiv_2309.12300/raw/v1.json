@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2309.12300",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2309.12300",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:2309.12300",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2309.12300",
+    "paper_arxiv_version": 1,
+    "paper_doi": "",
+    "paper_title": "See to Touch: Learning Tactile Dexterity through Visual Incentives",
+    "paper_authors": [
+      "Irmak Guzey",
+      "Yinlong Dai",
+      "Ben Evans",
+      "Soumith Chintala",
+      "Lerrel Pinto"
+    ],
+    "paper_first_author": "Irmak Guzey",
+    "paper_year": 2023,
+    "paper_submitted_date": "2023-09-21",
+    "paper_updated_date": "2023-09-21",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "paper_abstract": "Equipping multi-fingered robots with tactile sensing is crucial for achieving the precise, contact-rich, and dexterous manipulation that humans excel at. However, relying solely on tactile sensing fails to provide adequate cues for reasoning about objects' spatial configurations, limiting the ability to correct errors and adapt to changing situations. In this paper, we present Tactile Adaptation from Visual Incentives (TAVI), a new framework that enhances tactile-based dexterity by optimizing dexterous policies using vision-based rewards. First, we use a contrastive-based objective to learn visual representations. Next, we construct a reward function using these visual representations through optimal-transport based matching on one human demonstration. Finally, we use online reinforcement learning on our robot to optimize tactile-based policies that maximize the visual reward. On six challenging tasks, such as peg pick-and-place, unstacking bowls, and flipping slender objects, TAVI achieves a success rate of 73% using our four-fingered Allegro robot hand. The increase in performance is 108% higher than policies using tactile and vision-based rewards and 135% higher than policies without tactile observational input. Robot videos are best viewed on our project website: https://see-to-touch.github.io/.",
+    "paper_pdf_url": "https://arxiv.org/pdf/2309.12300v1",
+    "paper_abs_url": "https://arxiv.org/abs/2309.12300v1",
+    "paper_project_url": "https://see-to-touch.github.io/",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "7c985af1256a781a2f5f51bec9591a92935586cf3cc852fb4d6f82d86665abca",
+  "extracted_text_sha256": ""
+}

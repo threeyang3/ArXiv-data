@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:1810.10191",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "1810.10191",
+  "source_version": 2,
+  "metadata": {
+    "paper_uid": "arxiv:1810.10191",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "1810.10191",
+    "paper_arxiv_version": 2,
+    "paper_doi": "",
+    "paper_title": "Making Sense of Vision and Touch: Self-Supervised Learning of Multimodal Representations for Contact-Rich Tasks",
+    "paper_authors": [
+      "Michelle A. Lee",
+      "Yuke Zhu",
+      "Krishnan Srinivasan",
+      "Parth Shah",
+      "Silvio Savarese",
+      "Li Fei-Fei",
+      "Animesh Garg",
+      "Jeannette Bohg"
+    ],
+    "paper_first_author": "Michelle A. Lee",
+    "paper_year": 2018,
+    "paper_submitted_date": "2018-10-24",
+    "paper_updated_date": "2019-03-08",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "paper_abstract": "Contact-rich manipulation tasks in unstructured environments often require both haptic and visual feedback. However, it is non-trivial to manually design a robot controller that combines modalities with very different characteristics. While deep reinforcement learning has shown success in learning control policies for high-dimensional inputs, these algorithms are generally intractable to deploy on real robots due to sample complexity. We use self-supervision to learn a compact and multimodal representation of our sensory inputs, which can then be used to improve the sample efficiency of our policy learning. We evaluate our method on a peg insertion task, generalizing over different geometry, configurations, and clearances, while being robust to external perturbations. Results for simulated and real robot experiments are presented.",
+    "paper_pdf_url": "https://arxiv.org/pdf/1810.10191v2",
+    "paper_abs_url": "https://arxiv.org/abs/1810.10191v2",
+    "paper_project_url": "https://sites.google.com/view/",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "b4ea73bd6fc5b0e7213881b664464b7351f91a57c0639d7fb6f97244af0391b5",
+  "extracted_text_sha256": ""
+}

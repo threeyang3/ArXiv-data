@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2502.12191",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2502.12191",
+  "source_version": 3,
+  "metadata": {
+    "paper_uid": "arxiv:2502.12191",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2502.12191",
+    "paper_arxiv_version": 3,
+    "paper_doi": "",
+    "paper_title": "AnyTouch: Learning Unified Static-Dynamic Representation across Multiple Visuo-tactile Sensors",
+    "paper_authors": [
+      "Ruoxuan Feng",
+      "Jiangyu Hu",
+      "Wenke Xia",
+      "Tianci Gao",
+      "Ao Shen",
+      "Yuhao Sun",
+      "Bin Fang",
+      "Di Hu"
+    ],
+    "paper_first_author": "Ruoxuan Feng",
+    "paper_year": 2025,
+    "paper_submitted_date": "2025-02-15",
+    "paper_updated_date": "2025-04-01",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.LG",
+    "paper_categories": [
+      "cs.LG",
+      "cs.CV",
+      "cs.RO"
+    ],
+    "paper_abstract": "Visuo-tactile sensors aim to emulate human tactile perception, enabling robots to precisely understand and manipulate objects. Over time, numerous meticulously designed visuo-tactile sensors have been integrated into robotic systems, aiding in completing various tasks. However, the distinct data characteristics of these low-standardized visuo-tactile sensors hinder the establishment of a powerful tactile perception system. We consider that the key to addressing this issue lies in learning unified multi-sensor representations, thereby integrating the sensors and promoting tactile knowledge transfer between them. To achieve unified representation of this nature, we introduce TacQuad, an aligned multi-modal multi-sensor tactile dataset from four different visuo-tactile sensors, which enables the explicit integration of various sensors. Recognizing that humans perceive the physical environment by acquiring diverse tactile information such as texture and pressure changes, we further propose to learn unified multi-sensor representations from both static and dynamic perspectives. By integrating tactile images and videos, we present AnyTouch, a unified static-dynamic multi-sensor representation learning framework with a multi-level structure, aimed at both enhancing comprehensive perceptual abilities and enabling effective cross-sensor transfer. This multi-level architecture captures pixel-level details from tactile data via masked modeling and enhances perception and transferability by learning semantic-level sensor-agnostic features through multi-modal alignment and cross-sensor matching. We provide a comprehensive analysis of multi-sensor transferability, and validate our method on various datasets and in the real-world pouring task. Experimental results show that our method outperforms existing methods, exhibits outstanding static and dynamic perception capabilities across various sensors.",
+    "paper_pdf_url": "https://arxiv.org/pdf/2502.12191v3",
+    "paper_abs_url": "https://arxiv.org/abs/2502.12191v3",
+    "paper_project_url": "https://www.gelsight.com/gelsightmini/",
+    "paper_code_url": "",
+    "paper_dataset_url": "https://gewu-lab.github.io/AnyTouch/"
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "2047c175d033eb9079a5272a206158b98a7d2a36b7a0dc2508cdef94e9d6722f",
+  "extracted_text_sha256": ""
+}

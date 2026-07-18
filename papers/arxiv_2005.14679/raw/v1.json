@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2005.14679",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2005.14679",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:2005.14679",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2005.14679",
+    "paper_arxiv_version": 1,
+    "paper_doi": "10.1109/LRA.2020.2977257",
+    "paper_title": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
+    "paper_authors": [
+      "Mike Lambeta",
+      "Po-Wei Chou",
+      "Stephen Tian",
+      "Brian Yang",
+      "Benjamin Maloon",
+      "Victoria Rose Most",
+      "Dave Stroud",
+      "Raymond Santos",
+      "Ahmad Byagowi",
+      "Gregg Kammerer",
+      "Dinesh Jayaraman",
+      "Roberto Calandra"
+    ],
+    "paper_first_author": "Mike Lambeta",
+    "paper_year": 2020,
+    "paper_submitted_date": "2020-05-29",
+    "paper_updated_date": "2020-05-29",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO",
+      "cs.LG",
+      "eess.SY",
+      "stat.ML"
+    ],
+    "paper_abstract": "Despite decades of research, general purpose in-hand manipulation remains one of the unsolved challenges of robotics. One of the contributing factors that limit current robotic manipulation systems is the difficulty of precisely sensing contact forces -- sensing and reasoning about contact forces are crucial to accurately control interactions with the environment. As a step towards enabling better robotic manipulation, we introduce DIGIT, an inexpensive, compact, and high-resolution tactile sensor geared towards in-hand manipulation. DIGIT improves upon past vision-based tactile sensors by miniaturizing the form factor to be mountable on multi-fingered hands, and by providing several design improvements that result in an easier, more repeatable manufacturing process, and enhanced reliability. We demonstrate the capabilities of the DIGIT sensor by training deep neural network model-based controllers to manipulate glass marbles in-hand with a multi-finger robotic hand. To provide the robotic community access to reliable and low-cost tactile sensors, we open-source the DIGIT design at https://digit.ml/.",
+    "paper_pdf_url": "https://arxiv.org/pdf/2005.14679v1",
+    "paper_abs_url": "https://arxiv.org/abs/2005.14679v1",
+    "paper_project_url": "https://digit.ml/",
+    "paper_code_url": "",
+    "paper_dataset_url": "https://www.digit.ml"
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "dbcae130d003bcea9c4a61075458f3ea11597c60e029c18b88f254958fc97d14",
+  "extracted_text_sha256": ""
+}

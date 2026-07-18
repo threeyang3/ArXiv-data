@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2304.13705",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2304.13705",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:2304.13705",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2304.13705",
+    "paper_arxiv_version": 1,
+    "paper_doi": "",
+    "paper_title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "paper_authors": [
+      "Tony Z. Zhao",
+      "Vikash Kumar",
+      "Sergey Levine",
+      "Chelsea Finn"
+    ],
+    "paper_first_author": "Tony Z. Zhao",
+    "paper_year": 2023,
+    "paper_submitted_date": "2023-04-23",
+    "paper_updated_date": "2023-04-23",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "paper_abstract": "Fine manipulation tasks, such as threading cable ties or slotting a battery, are notoriously difficult for robots because they require precision, careful coordination of contact forces, and closed-loop visual feedback. Performing these tasks typically requires high-end robots, accurate sensors, or careful calibration, which can be expensive and difficult to set up. Can learning enable low-cost and imprecise hardware to perform these fine manipulation tasks? We present a low-cost system that performs end-to-end imitation learning directly from real demonstrations, collected with a custom teleoperation interface. Imitation learning, however, presents its own challenges, particularly in high-precision domains: errors in the policy can compound over time, and human demonstrations can be non-stationary. To address these challenges, we develop a simple yet novel algorithm, Action Chunking with Transformers (ACT), which learns a generative model over action sequences. ACT allows the robot to learn 6 difficult tasks in the real world, such as opening a translucent condiment cup and slotting a battery with 80-90% success, with only 10 minutes worth of demonstrations. Project website: https://tonyzhaozh.github.io/aloha/",
+    "paper_pdf_url": "https://arxiv.org/pdf/2304.13705v1",
+    "paper_abs_url": "https://arxiv.org/abs/2304.13705v1",
+    "paper_project_url": "https://tonyzhaozh.github.io/aloha/",
+    "paper_code_url": "https://github.com/",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "2e2fe25860f5f9cee9e655a2714e9f2264a7a5078bcd267c16d3f39af461345a",
+  "extracted_text_sha256": ""
+}

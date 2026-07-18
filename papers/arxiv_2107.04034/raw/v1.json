@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2107.04034",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2107.04034",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:2107.04034",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2107.04034",
+    "paper_arxiv_version": 1,
+    "paper_doi": "",
+    "paper_title": "RMA: Rapid Motor Adaptation for Legged Robots",
+    "paper_authors": [
+      "Ashish Kumar",
+      "Zipeng Fu",
+      "Deepak Pathak",
+      "Jitendra Malik"
+    ],
+    "paper_first_author": "Ashish Kumar",
+    "paper_year": 2021,
+    "paper_submitted_date": "2021-07-08",
+    "paper_updated_date": "2021-07-08",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.LG",
+    "paper_categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CV",
+      "cs.RO"
+    ],
+    "paper_abstract": "Successful real-world deployment of legged robots would require them to adapt in real-time to unseen scenarios like changing terrains, changing payloads, wear and tear. This paper presents Rapid Motor Adaptation (RMA) algorithm to solve this problem of real-time online adaptation in quadruped robots. RMA consists of two components: a base policy and an adaptation module. The combination of these components enables the robot to adapt to novel situations in fractions of a second. RMA is trained completely in simulation without using any domain knowledge like reference trajectories or predefined foot trajectory generators and is deployed on the A1 robot without any fine-tuning. We train RMA on a varied terrain generator using bioenergetics-inspired rewards and deploy it on a variety of difficult terrains including rocky, slippery, deformable surfaces in environments with grass, long vegetation, concrete, pebbles, stairs, sand, etc. RMA shows state-of-the-art performance across diverse real-world as well as simulation experiments. Video results at https://ashish-kmr.github.io/rma-legged-robots/",
+    "paper_pdf_url": "https://arxiv.org/pdf/2107.04034v1",
+    "paper_abs_url": "https://arxiv.org/abs/2107.04034v1",
+    "paper_project_url": "https://ashish-kmr.github.io/rma-legged-robots/",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "d8660da881851756287efab24d85f5c629ba97878f70297eb429a8e8a9a57846",
+  "extracted_text_sha256": ""
+}

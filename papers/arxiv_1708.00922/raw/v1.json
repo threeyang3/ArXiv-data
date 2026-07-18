@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:1708.00922",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "1708.00922",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:1708.00922",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "1708.00922",
+    "paper_arxiv_version": 1,
+    "paper_doi": "10.1109/IROS.2017.8202149",
+    "paper_title": "Improved GelSight Tactile Sensor for Measuring Geometry and Slip",
+    "paper_authors": [
+      "Siyuan Dong",
+      "Wenzhen Yuan",
+      "Edward Adelson"
+    ],
+    "paper_first_author": "Siyuan Dong",
+    "paper_year": 2017,
+    "paper_submitted_date": "2017-08-02",
+    "paper_updated_date": "2017-08-02",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO"
+    ],
+    "paper_abstract": "A GelSight sensor uses an elastomeric slab covered with a reflective membrane to measure tactile signals. It measures the 3D geometry and contact force information with high spacial resolution, and successfully helped many challenging robot tasks. A previous sensor, based on a semi-specular membrane, produces high resolution but with limited geometry accuracy. In this paper, we describe a new design of GelSight for robot gripper, using a Lambertian membrane and new illumination system, which gives greatly improved geometric accuracy while retaining the compact size. We demonstrate its use in measuring surface normals and reconstructing height maps using photometric stereo. We also use it for the task of slip detection, using a combination of information about relative motions on the membrane surface and the shear distortions. Using a robotic arm and a set of 37 everyday objects with varied properties, we find that the sensor can detect translational and rotational slip in general cases, and can be used to improve the stability of the grasp.",
+    "paper_pdf_url": "https://arxiv.org/pdf/1708.00922v1",
+    "paper_abs_url": "https://arxiv.org/abs/1708.00922v1",
+    "paper_project_url": "http://people.csail.mit.edu/yuan",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "9c27d57d760f895d2d90c8c287368ee90580f1f72b8be0d5d7016cd2aa207afb",
+  "extracted_text_sha256": ""
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:1904.01201",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "1904.01201",
+  "source_version": 2,
+  "metadata": {
+    "paper_uid": "arxiv:1904.01201",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "1904.01201",
+    "paper_arxiv_version": 2,
+    "paper_doi": "",
+    "paper_title": "Habitat: A Platform for Embodied AI Research",
+    "paper_authors": [
+      "Manolis Savva",
+      "Abhishek Kadian",
+      "Oleksandr Maksymets",
+      "Yili Zhao",
+      "Erik Wijmans",
+      "Bhavana Jain",
+      "Julian Straub",
+      "Jia Liu",
+      "Vladlen Koltun",
+      "Jitendra Malik",
+      "Devi Parikh",
+      "Dhruv Batra"
+    ],
+    "paper_first_author": "Manolis Savva",
+    "paper_year": 2019,
+    "paper_submitted_date": "2019-04-02",
+    "paper_updated_date": "2019-11-25",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.CV",
+    "paper_categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.RO"
+    ],
+    "paper_abstract": "We present Habitat, a platform for research in embodied artificial intelligence (AI). Habitat enables training embodied agents (virtual robots) in highly efficient photorealistic 3D simulation. Specifically, Habitat consists of: (i) Habitat-Sim: a flexible, high-performance 3D simulator with configurable agents, sensors, and generic 3D dataset handling. Habitat-Sim is fast -- when rendering a scene from Matterport3D, it achieves several thousand frames per second (fps) running single-threaded, and can reach over 10,000 fps multi-process on a single GPU. (ii) Habitat-API: a modular high-level library for end-to-end development of embodied AI algorithms -- defining tasks (e.g., navigation, instruction following, question answering), configuring, training, and benchmarking embodied agents. These large-scale engineering contributions enable us to answer scientific questions requiring experiments that were till now impracticable or 'merely' impractical. Specifically, in the context of point-goal navigation: (1) we revisit the comparison between learning and SLAM approaches from two recent works and find evidence for the opposite conclusion -- that learning outperforms SLAM if scaled to an order of magnitude more experience than previous investigations, and (2) we conduct the first cross-dataset generalization experiments {train, test} x {Matterport3D, Gibson} for multiple sensors {blind, RGB, RGBD, D} and find that only agents with depth (D) sensors generalize across datasets. We hope that our open-source platform and these findings will advance research in embodied AI.",
+    "paper_pdf_url": "https://arxiv.org/pdf/1904.01201v2",
+    "paper_abs_url": "https://arxiv.org/abs/1904.01201v2",
+    "paper_project_url": "https://aihabitat.org",
+    "paper_code_url": "",
+    "paper_dataset_url": "https://magnum.graphics/"
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "53485f2ed9af000b4f929be140c94e9bc097a59b69a0e5ae847446c0bb947e18",
+  "extracted_text_sha256": ""
+}

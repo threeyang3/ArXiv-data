@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2111.00071",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2111.00071",
+  "source_version": 2,
+  "metadata": {
+    "paper_uid": "arxiv:2111.00071",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2111.00071",
+    "paper_arxiv_version": 2,
+    "paper_doi": "",
+    "paper_title": "ReSkin: versatile, replaceable, lasting tactile skins",
+    "paper_authors": [
+      "Raunaq Bhirangi",
+      "Tess Hellebrekers",
+      "Carmel Majidi",
+      "Abhinav Gupta"
+    ],
+    "paper_first_author": "Raunaq Bhirangi",
+    "paper_year": 2021,
+    "paper_submitted_date": "2021-10-29",
+    "paper_updated_date": "2022-02-12",
+    "paper_published_venue": "PMLR 164:587-597, 2022",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "paper_abstract": "Soft sensors have continued growing interest in robotics, due to their ability to enable both passive conformal contact from the material properties and active contact data from the sensor properties. However, the same properties of conformal contact result in faster deterioration of soft sensors and larger variations in their response characteristics over time and across samples, inhibiting their ability to be long-lasting and replaceable. ReSkin is a tactile soft sensor that leverages machine learning and magnetic sensing to offer a low-cost, diverse and compact solution for long-term use. Magnetic sensing separates the electronic circuitry from the passive interface, making it easier to replace interfaces as they wear out while allowing for a wide variety of form factors. Machine learning allows us to learn sensor response models that are robust to variations across fabrication and time, and our self-supervised learning algorithm enables finer performance enhancement with small, inexpensive data collection procedures. We believe that ReSkin opens the door to more versatile, scalable and inexpensive tactile sensation modules than existing alternatives.",
+    "paper_pdf_url": "https://arxiv.org/pdf/2111.00071v2",
+    "paper_abs_url": "https://arxiv.org/abs/2111.00071v2",
+    "paper_project_url": "https://reskin.dev/",
+    "paper_code_url": "",
+    "paper_dataset_url": ""
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "b0897a9707c8e32d86856a13328e9197707c10570e12037f54a73d43833c98bd",
+  "extracted_text_sha256": ""
+}
