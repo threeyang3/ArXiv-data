@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2606.11184",
+  "extensions": {},
+  "analysis_id": "2a2d546fd8ae42466db2e669",
+  "identity": {
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "profile": "full_analysis",
+    "prompt_version": "paper-analysis-v2",
+    "analysis_schema_version": 1,
+    "source_content_hash": "aebe435c0b1e380379e3e440a5ce1c4bb8f4eba74bc5334517a09dc39cc1fd0a"
+  },
+  "analyzed_at": "2026-07-18T15:25:39+08:00",
+  "created_at": "2026-07-18T15:25:39+08:00",
+  "publisher": "",
+  "status": "complete",
+  "analysis": {
+    "ai_analysis_status": "complete",
+    "ai_relevance_score": 5.0,
+    "ai_relevance_reason": "论文直接研究接触丰富型机器人操作，核心涉及触觉-力觉建模、世界模型与真实机器人控制，与具身智能/机器人学习高度相关。",
+    "ai_topic_primary": "Embodied Intelligence",
+    "ai_topics": [
+      "Embodied Intelligence",
+      "Tactile Sensing",
+      "World Models",
+      "Imitation Learning",
+      "Contact Rich Manipulation",
+      "Reinforcement Learning"
+    ],
+    "ai_method_family": [
+      "world model",
+      "imitation learning",
+      "multimodal sensor fusion",
+      "latent dynamics modeling",
+      "flow matching"
+    ],
+    "ai_task_types": [
+      "contact-rich manipulation",
+      "tactile prediction",
+      "action sequence prediction",
+      "real-robot control",
+      "perturbation recovery"
+    ],
+    "ai_robot_platforms": [
+      "UFactory xArm7",
+      "Robotiq 2F-85 gripper",
+      "Intel RealSense D435",
+      "UFactory 6-axis force/torque sensor",
+      "Xense tactile sensors"
+    ],
+    "ai_datasets": [],
+    "ai_baselines": [
+      "Diffusion Policy (DP)",
+      "DP+Tactile+Force",
+      "KineDex",
+      "FoAR",
+      "Reactive Diffusion Policy (RDP)"
+    ],
+    "ai_novelty_score": 4,
+    "ai_novelty_confidence": 0.82,
+    "ai_novelty_reason": "创新点主要在于显式建模“腕部力/力矩先于局部触觉变化”的非对称关系：先用力条件触觉潜变量世界模型做短时预测，再将预测触觉作为策略先验，并通过当前-未来触觉交互与自适应视触融合用于动作生成。相较仅做并行融合或被动反馈的方法，思路较新，但整体仍建立在已有触觉编码、Transformer/AdaLN、流匹配等成熟组件之上。",
+    "ai_completeness_score": 4,
+    "ai_completeness_confidence": 0.8,
+    "ai_completeness_reason": "论文完整给出了方法两阶段结构、主要损失函数、平台、任务、基线与消融，并报告了真实机器人结果与表示分析。但仍缺少若干关键实现细节，例如数据划分、动作/观测窗口精确长度、网络层数与训练超参全量配置、统计显著性与方差报告。",
+    "ai_reproducibility_score": 2,
+    "ai_reproducibility_confidence": 0.88,
+    "ai_reproducibility_reason": "可复现性偏弱。论文给出了硬件、传感频率、参数量、训练步数和部分损失权重，但缺少完整实现细节、数据采集协议细节、随机种子、评测方差与开源资源。文中关于“模型和数据集将公开”的表述属于未来发布声明，不能视为当前已验证可获得资源。",
+    "ai_overall_score": 3.3,
+    "ai_overall_confidence": 0.84,
+    "ai_recommendation": "建议优先阅读。对于关注触觉/力觉驱动的接触丰富型操作、预测式多模态控制与扰动恢复的研究者，这篇论文有较高参考价值；但若目标是严格复现，需等待代码/数据或补充实现细节。",
+    "ai_summary_short": "论文提出 TacForeSight：先用腕部力/力矩条件的触觉世界模型预测短时未来触觉潜变量，再将其作为接触先验输入策略，以提升接触丰富型操作中的前瞻性控制与扰动恢复。作者在 5 个真实机器人任务和 3 个过程内扰动场景上报告了优于多种基线的结果，优势主要体现在动态接触变化下的稳健性。",
+    "ai_difficulty": "hard",
+    "ai_math_level": "medium",
+    "ai_code_level": "medium",
+    "ai_estimated_reading_priority": 5,
+    "sections": {
+      "problem": "接触丰富型操作中，机器人需要在接触建立、维持与切换过程中持续感知并调节物理交互。现有方法虽引入力觉或触觉，但多将其作为并行融合的观测或被动反馈，较少显式建模“全局腕部力/力矩变化先于局部触觉响应”的时空非对称关系，因此在动态接触过渡与扰动恢复中前瞻性不足。",
+      "contributions": [
+        "提出 TacForeSight：一个面向实时接触丰富型操作的轻量级力条件触觉前瞻框架。",
+        "提出 TacForceWM：根据双指触觉历史与高频腕部力/力矩信号，在潜空间中预测短时未来触觉动态。",
+        "提出 Predictive Tactile-Conditioned Policy：将预测触觉潜变量作为接触先验，通过当前-未来触觉交叉注意力和触觉引导门控实现自适应视触融合，并用条件流匹配生成动作序列。",
+        "在 5 个真实机器人任务和 3 个过程内扰动场景上展示了较强性能，并通过消融分析验证力条件、预测触觉、交叉注意力和自适应门控的作用。"
+      ],
+      "method": "方法分两阶段。第一阶段的 TacForceWM 包含触觉 tokenizer、力编码器和潜动态预测器：双指光学触觉场先经共享 CNN-Transformer 编码为紧凑潜变量；高频六维腕部力/力矩序列经因果时序编码并与触觉时间尺度对齐；随后使用带 AdaLN 条件注入的 Transformer 预测带偏移量的未来触觉潜变量块，并用潜变量 MSE、时间差分 MSE 与 SIGReg 训练。第二阶段策略网络提取图像、状态、当前触觉和预测触觉特征，以当前触觉为 query、预测触觉为 key/value 做交叉注意力，得到未来感知触觉表征；再通过触觉引导的通道门控自适应融合视觉与触觉，并以条件流匹配动作头预测动作块。",
+      "experiments": "实验平台为 xArm7 + Robotiq 2F-85 + RealSense D435 + 六维力/力矩传感器 + 双 Xense 指尖触觉传感器。触觉/图像 30Hz，腕部力/力矩 120Hz。世界模型在 2700 段力触交互数据上训练，随后冻结相关模块用于下游策略。评测包含 5 个任务：花瓶擦拭、卡片划擦、软管调整插入、灯泡插入锁紧、导线插入；以及 3 个过程内扰动设置：擦拭高度扰动、划擦角度扰动、软管调整位姿扰动。比较对象包括 DP、DP+Tactile+Force、KineDex、FoAR、RDP，并进行了条件模态和策略结构消融。",
+      "results": "主结果显示，TacForeSight 在 5 个标准任务上的平均完成率约为 79.0%，在 3 个扰动场景上的平均得分约为 86.7%，均显著高于文中基线。表 II 显示腕部力/力矩作为世界模型条件时预测质量最佳（MSE 0.017、Cos 0.992、KLsym 0.009）。表 III 表明移除预测触觉、力条件、交叉注意力或自适应门控都会降低性能，尤其在扰动恢复中更明显。表示分析还显示，预测触觉潜变量可比当前触觉更早约 200ms 对关键接触变化作出响应，并在未见交互类型上表现出一定可分辨性。",
+      "limitations": "局限性包括：1）评测任务数有限，且均基于单一硬件栈，跨机器人、跨传感器泛化仍未验证；2）每个任务仅 20 次试验，未报告方差、置信区间或显著性检验；3）论文没有与更广泛的最新预测式触觉/世界模型方法做系统比较；4）复现信息不完整，代码与数据集并未在论文文本中作为已验证资源提供，只有“将公开”的未来声明；5）论文强调实时性并声称可达 20Hz，但缺少更细粒度的时延拆解、资源占用与控制闭环稳定性分析。"
+    },
+    "version_change_note": "当前版本 v1。",
+    "ai_analysis_provider": "codex",
+    "ai_analysis_model": "gpt-5.4",
+    "ai_analysis_profile": "full_analysis",
+    "ai_analysis_prompt_version": "paper-analysis-v2",
+    "ai_analyzed_at": "2026-07-18T15:25:39+08:00"
+  }
+}
