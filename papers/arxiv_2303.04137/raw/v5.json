@@ -1,0 +1,45 @@
+{
+  "extensions": {},
+  "extracted_text_sha256": "",
+  "metadata": {
+    "paper_abs_url": "https://arxiv.org/abs/2303.04137v5",
+    "paper_abstract": "This paper introduces Diffusion Policy, a new way of generating robot behavior by representing a robot's visuomotor policy as a conditional denoising diffusion process. We benchmark Diffusion Policy across 12 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average improvement of 46.9%. Diffusion Policy learns the gradient of the action-distribution score function and iteratively optimizes with respect to this gradient field during inference via a series of stochastic Langevin dynamics steps. We find that the diffusion formulation yields powerful advantages when used for robot policies, including gracefully handling multimodal action distributions, being suitable for high-dimensional action spaces, and exhibiting impressive training stability. To fully unlock the potential of diffusion models for visuomotor policy learning on physical robots, this paper presents a set of key technical contributions including the incorporation of receding horizon control, visual conditioning, and the time-series diffusion transformer. We hope this work will help motivate a new generation of policy learning techniques that are able to leverage the powerful generative modeling capabilities of diffusion models. Code, data, and training details is publicly available diffusion-policy.cs.columbia.edu",
+    "paper_arxiv_id": "2303.04137",
+    "paper_arxiv_version": 5,
+    "paper_authors": [
+      "Cheng Chi",
+      "Zhenjia Xu",
+      "Siyuan Feng",
+      "Eric Cousineau",
+      "Yilun Du",
+      "Benjamin Burchfiel",
+      "Russ Tedrake",
+      "Shuran Song"
+    ],
+    "paper_categories": [
+      "cs.RO"
+    ],
+    "paper_code_url": "https://github.com/real-stanford/diffusion_policy",
+    "paper_dataset_url": "https://diffusion-policy.cs.columbia.edu/data/",
+    "paper_doi": "",
+    "paper_first_author": "Cheng Chi",
+    "paper_pdf_url": "https://arxiv.org/pdf/2303.04137v5",
+    "paper_primary_category": "cs.RO",
+    "paper_project_url": "https://diffusion-policy.cs.columbia.edu/",
+    "paper_published_venue": "The International Journal of Robotics Research (2024); Robotics: Science and Systems (2023)",
+    "paper_source": "arxiv",
+    "paper_submitted_date": "2023-03-07",
+    "paper_title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+    "paper_uid": "arxiv:2303.04137",
+    "paper_updated_date": "2024-03-14",
+    "paper_year": 2023
+  },
+  "paper_uid": "arxiv:2303.04137",
+  "pdf_sha256": "b65c474b696a4802d8f1457d86b637ce2c5521412570d3aa928cd54563babc8f",
+  "schema_version": 1,
+  "source": "arxiv",
+  "source_id": "2303.04137",
+  "source_license": "",
+  "source_response": {},
+  "source_version": 5
+}

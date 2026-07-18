@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2607.15275",
+  "extensions": {},
+  "analysis_id": "c55044e484c850ad6cf255e0",
+  "identity": {
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "profile": "full_analysis",
+    "prompt_version": "paper-analysis-v2",
+    "analysis_schema_version": 1,
+    "source_content_hash": "6e3cbcbc0ab4db0c20e693c905c9ff4e7f7afe726b15f8fb6dc3a6d7415e4ca0"
+  },
+  "analyzed_at": "2026-07-18T08:01:42+08:00",
+  "created_at": "2026-07-18T08:01:42+08:00",
+  "publisher": "",
+  "status": "complete",
+  "analysis": {
+    "ai_analysis_status": "complete",
+    "ai_relevance_score": 5.0,
+    "ai_relevance_reason": "论文直接研究长时序机器人策略、视觉-语言-动作模型与真实机器人操作，且核心贡献落在 embodied intelligence / robot learning。",
+    "ai_topic_primary": "Imitation Learning",
+    "ai_topics": [
+      "Imitation Learning",
+      "Vision Language Action",
+      "Robot Manipulation",
+      "Robot Foundation Models"
+    ],
+    "ai_method_family": [
+      "Test-Time Training",
+      "Fast Weights",
+      "Vision-Language-Action Policy",
+      "Diffusion/Flow-Matching Policy",
+      "Truncated BPTT",
+      "DAgger Distillation"
+    ],
+    "ai_task_types": [
+      "长时程装配",
+      "单次视频上下文模仿",
+      "扰动恢复",
+      "在线纠错",
+      "双臂操作"
+    ],
+    "ai_robot_platforms": [
+      "YAM 双臂桌面操作平台"
+    ],
+    "ai_datasets": [
+      "作者自采真实机器人任务数据（Pup Go Car / Circuit / Gear Bot）",
+      "桌面双臂机器人预训练混合数据",
+      "EgoScale 人类自我中心视频数据"
+    ],
+    "ai_baselines": [
+      "GR00T N1.7",
+      "GR00T N1.7 Hist.",
+      "GDN (Gated DeltaNet)"
+    ],
+    "ai_novelty_score": 4,
+    "ai_novelty_confidence": 0.85,
+    "ai_novelty_reason": "将 TTT/fast weights 作为机器人时序建模机制并扩展到 8K timestep，在真实机器人上展示单次上下文模仿、在线改进与长时程收益，组合上较新；但骨干、TTT 与 DAgger 思路本身并非全新。",
+    "ai_completeness_score": 4,
+    "ai_completeness_confidence": 0.84,
+    "ai_completeness_reason": "问题、方法、训练配方、任务设定、主结果、消融和局限性都给得较完整，附录也补充了架构与训练细节；但若要严格复现，仍缺少更细的实现与数据公开细节。",
+    "ai_reproducibility_score": 2,
+    "ai_reproducibility_confidence": 0.88,
+    "ai_reproducibility_reason": "论文提供了骨干、层数、GPU、步数、学习率、任务 rubric 等关键信息，但未在文中给出 RoboTTT 专用代码或数据下载。可验证的公开资源主要是 arXiv 页面、项目页视频，以及用于 GDN baseline 的 flash-linear-attention 库；RoboTTT 本身的完整训练/评测资源未被确认公开。",
+    "ai_overall_score": 3.3,
+    "ai_overall_confidence": 0.86,
+    "ai_recommendation": "推荐精读。对长上下文机器人策略、测试时适应、VLA 时序建模都很有参考价值，尤其适合关注真实机器人长时程控制与上下文缩放规律的读者；但若目标是立即复现，需要预期较高工程门槛与资源缺口。",
+    "ai_summary_short": "本文提出 RoboTTT，将 Test-Time Training 引入机器人策略，把快权重作为跨时间的递归状态，在不增加推理时延的前提下把视觉运动上下文扩展到 8K timestep。方法以 GR00T N1.7 为骨干，在 DiT 动作头各层后加入 TTT 层，并结合 sequence action forcing 与 TBPTT 训练。真实双臂装配实验显示，其在三项长时程任务上显著优于单步和短历史基线，还展现了基于人类视频的单次上下文模仿、扰动恢复和基于 DAgger Distillation 的在线纠错能力。论文的强点是真实机器人闭环结果扎实、上下文长度缩放趋势清晰；主要短板是复现资源尚不充分。",
+    "ai_difficulty": "hard",
+    "ai_math_level": "medium",
+    "ai_code_level": "high",
+    "ai_estimated_reading_priority": 5,
+    "sections": {
+      "problem": "现有机器人基础模型大多只看单步或极短历史，难以利用长时视觉运动上下文完成长时程、多阶段任务，也难以实现基于上下文的人类视频模仿、在线纠错和扰动恢复。论文要解决的是：如何把机器人策略的上下文长度扩展到数千时间步，同时保持推理开销不随历史增长。",
+      "contributions": [
+        "提出 RoboTTT：把 Test-Time Training/fast weights 集成进机器人基础模型，作为跨时间的序列建模机制。",
+        "提出适配机器人序列训练的配方：sequence action forcing + truncated BPTT，使 8K timestep 训练可行。",
+        "提出长上下文条件学习方式：可用人类视频作为纯上下文进行单次 in-context imitation。",
+        "提出 DAgger Distillation：把失败动作作为上下文、人工纠正作为监督目标，将“失败到纠正”的映射蒸馏进快权重。",
+        "在真实双臂装配任务上报告长上下文带来的稳定闭环收益，并展示预训练上下文长度扩展的 scaling trend。"
+      ],
+      "method": "模型以预训练 GR00T N1.7 为骨干，在其 16 层 DiT 动作头的每层注意力后加入 TTT 层。单步内由 self/cross-attention 处理当前时刻 token，跨时间则把各时刻 token 展平后送入 TTT 层，用快权重参数化的小型两层 MLP 进行“更新再应用”的测试时训练。为保留预训练能力，TTT 输出通过接近零初始化的 tanh gate 残差加入。训练时对动作采用 flow-matching 目标，并对序列中每个 action chunk 独立采样噪声级别（sequence action forcing）；长序列训练使用 TBPTT，仅在段内反传、段间传递并 detach 快权重。对于单次模仿，人类视频段只更新快权重、不计算动作损失；对于 DAgger Distillation，整段失败-纠正轨迹都更新快权重，但只在人工纠正片段上计算 imitation loss。",
+      "experiments": "实验在 YAM 双臂平台上进行，含 Pup Go Car、Circuit、Gear Bot 三个长时程装配任务，平均时长约 2、1、5 分钟。每个任务使用数小时真实机器人数据，Circuit 还含 80 种配置并评测未见配置泛化。基线包括单步 GR00T N1.7、带一帧历史的 GR00T N1.7 Hist.、以及把 TTT 换成 Gated DeltaNet 的 GDN。评测指标包括 rubric-based task completion score 和完整成功次数；另外评测了预训练上下文长度缩放、基于人类视频的单次模仿、外部扰动恢复、DAgger Distillation，以及 sequence action forcing / fast model / token 设计等消融。",
+      "results": "主结果上，RoboTTT 在三项任务平均 task completion score 为 79%，相对单步 GR00T N1.7 的 42% 提升约 87%，也明显高于最佳基线 GDN 的 56%。在最长的 Gear Bot 任务上，只有 RoboTTT 实现了完整成功（2/10）。上下文长度缩放方面，RoboTTT 从 128 提升到 8K timestep 时闭环表现持续上升，8K 相比 1K 预训练版本提升约 63%，且优于短上下文基线；GDN 未显示类似趋势。单次视频模仿方面，RoboTTT 在 Circuit 未见配置上达到 6/10 成功，而 GDN 为 0/10。扰动恢复和 DAgger Distillation 也进一步验证了长上下文快权重对在线纠错和恢复能力的帮助。",
+      "limitations": "论文明确指出训练长上下文会显著增加训练成本。虽然方法与实验较完整，但复现层面仍有限：文中未确认公开 RoboTTT 专用代码、模型权重或任务数据，公开可验证资源主要是 arXiv 页面、项目页视频，以及用于 GDN baseline 的 flash-linear-attention 库。实验范围集中在单一双臂平台与三类装配任务，跨平台、跨任务族和更开放场景的泛化仍待验证。"
+    },
+    "version_change_note": "当前版本 v1。",
+    "ai_analysis_provider": "codex",
+    "ai_analysis_model": "gpt-5.4",
+    "ai_analysis_profile": "full_analysis",
+    "ai_analysis_prompt_version": "paper-analysis-v2",
+    "ai_analyzed_at": "2026-07-18T08:01:42+08:00"
+  }
+}
