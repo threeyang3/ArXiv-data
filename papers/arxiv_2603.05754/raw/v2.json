@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2603.05754",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2603.05754",
+  "source_version": 2,
+  "metadata": {
+    "paper_uid": "arxiv:2603.05754",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2603.05754",
+    "paper_arxiv_version": 2,
+    "paper_doi": "",
+    "paper_title": "Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation",
+    "paper_authors": [
+      "Dian Yu",
+      "Qingchuan Zhou",
+      "Bingkun Huang",
+      "Majid Khadiv",
+      "Zewen Yang"
+    ],
+    "paper_first_author": "Dian Yu",
+    "paper_year": 2026,
+    "paper_submitted_date": "2026-03-05",
+    "paper_updated_date": "2026-07-16",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO"
+    ],
+    "paper_abstract": "Current Vision-Language-Action (VLA) models rely primarily on RGB perception, preventing them from capturing modalities such as thermal signals that are imperceptible to conventional visual sensors. Moreover, end-to-end generative policies lack explicit safety constraints, making them fragile when encountering obstacles and novel scenarios outside the training distribution. To address these limitations, we propose Safe-Night VLA, a multimodal manipulation framework that enables robots to see the unseen while enforcing rigorous safety constraints for thermal-aware manipulation in unstructured environments. Specifically, Safe-Night VLA integrates long-wave infrared thermal perception into a pre-trained vision-language backbone, enabling semantic reasoning grounded in thermodynamic properties. To ensure safe execution under out-of-distribution conditions, we incorporate a safety filter via control barrier functions, which provide deterministic workspace constraint enforcement during policy execution. We validate our framework through real-world experiments on a Franka manipulator, introducing a novel evaluation paradigm featuring temperature-conditioned manipulation, subsurface target localization, and reflection disambiguation, while maintaining constrained execution at inference time. Results demonstrate that Safe-Night VLA outperforms RGB-only baselines and provide empirical evidence that foundation models can effectively leverage non-visible physical modalities for robust manipulation.",
+    "paper_pdf_url": "https://arxiv.org/pdf/2603.05754v2",
+    "paper_abs_url": "https://arxiv.org/abs/2603.05754v2",
+    "paper_project_url": "https://thisanwerss.github.io/Safe-Night-VLA",
+    "paper_code_url": "",
+    "paper_dataset_url": "",
+    "paper_title_display": "Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation",
+    "paper_citation_ids": [
+      "arxiv:2603.05754",
+      "arxiv:2604.15483"
+    ],
+    "paper_cites": []
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "98b7436e801e1371530c6f8519b956fe44a910b87f8d3b78ef979efa4a4e6ab6",
+  "extracted_text_sha256": ""
+}
