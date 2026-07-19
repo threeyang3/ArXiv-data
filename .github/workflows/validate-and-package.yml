@@ -21,9 +21,9 @@ jobs:
       - name: Install PaperFlow validator
         run: python -m pip install "git+https://github.com/threeyang3/PaperRead.git@main"
       - name: Validate schema and checksums
-        run: paperflow publish validate --output .
+        run: paperflow publish validate --vault . --output .
       - name: Scan public-data boundary
-        run: paperflow publish scan --output .
+        run: paperflow publish scan --vault . --output .
       - name: Build portable feed archive
         run: >-
           git archive
