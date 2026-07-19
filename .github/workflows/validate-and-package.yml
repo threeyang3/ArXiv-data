@@ -1,0 +1,46 @@
+name: Validate and package feed
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install PaperFlow validator
+        run: python -m pip install "git+https://github.com/threeyang3/PaperRead.git@main"
+      - name: Validate schema and checksums
+        run: paperflow publish validate --output .
+      - name: Scan public-data boundary
+        run: paperflow publish scan --output .
+      - name: Build portable feed archive
+        run: >-
+          git archive
+          --format=zip
+          --output=ArXiv-data-feed.zip
+          HEAD
+          --
+          feed.yaml
+          checksums
+          manifests
+          papers
+          schemas
+          LICENSE-DATA.md
+          README.md
+      - uses: actions/upload-artifact@v6
+        with:
+          name: ArXiv-data-feed
+          path: ArXiv-data-feed.zip
+          if-no-files-found: error
+          retention-days: 30
