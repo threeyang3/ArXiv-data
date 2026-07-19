@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2211.12498",
+  "extensions": {},
+  "analysis_id": "86b8a978a7e0b8cb86dd8ce3",
+  "identity": {
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "profile": "full_analysis",
+    "prompt_version": "paper-analysis-v2",
+    "analysis_schema_version": 1,
+    "source_content_hash": "ec2d7627a8d8dc37507db8bc9aea51fadbe5410a55c0b43dafc3004a3b12dff4"
+  },
+  "analyzed_at": "2026-07-19T09:52:48+08:00",
+  "created_at": "2026-07-19T09:52:48+08:00",
+  "publisher": "",
+  "status": "complete",
+  "analysis": {
+    "ai_analysis_status": "complete",
+    "ai_relevance_score": 4.5,
+    "ai_relevance_reason": "论文直接研究视觉-触觉联合感知、触觉表征学习与机器人抓取迁移评测，和具身智能/机器人学习高度相关；但核心贡献更偏数据集与感知建模，而非完整闭环控制。",
+    "ai_topic_primary": "Tactile Sensing",
+    "ai_topics": [
+      "Tactile Sensing",
+      "Imitation Learning",
+      "Reinforcement Learning"
+    ],
+    "ai_method_family": [
+      "数据集构建",
+      "自监督对比学习",
+      "条件图像翻译",
+      "视频预测",
+      "多模态表征学习"
+    ],
+    "ai_task_types": [
+      "视觉-触觉配对数据采集",
+      "材料识别",
+      "抓取成功预测",
+      "触觉驱动图像风格化",
+      "未来触觉帧预测"
+    ],
+    "ai_robot_platforms": [
+      "GelSight触觉传感器",
+      "人类手持触觉采集设置",
+      "机器人抓取臂评测平台"
+    ],
+    "ai_datasets": [
+      "Touch and Go",
+      "The Feeling of Success",
+      "More Than a Feeling",
+      "VisGel",
+      "ObjectFolder 2.0"
+    ],
+    "ai_baselines": [
+      "ImageNet监督预训练特征",
+      "ObjectFolder 2.0上的visuo-tactile CMC",
+      "VisGel上的visuo-tactile CMC",
+      "CycleGAN",
+      "原始图像基线",
+      "SVG视频预测",
+      "Geng等人的视频预测模型"
+    ],
+    "ai_novelty_score": 4,
+    "ai_novelty_confidence": 0.86,
+    "ai_novelty_reason": "新意主要在于提出较大规模、真实场景、由人类在野外采集的视觉-触觉配对数据集，并把它用于三个不同任务；其中“触觉驱动图像风格化”任务也较新。但具体建模大多建立在已有CMC、CUT/PatchGAN和视频预测框架之上，方法层面的原创性弱于数据层面的原创性。",
+    "ai_completeness_score": 4,
+    "ai_completeness_confidence": 0.84,
+    "ai_completeness_reason": "论文对采集流程、硬件、标注、数据统计、三类任务、评测协议和主要超参数给出了较完整描述，附录还补充了文件结构与实现细节。但仍有若干不完备处：部分对象实例数是按10%视频外推估计；抓取任务没有沿用现成标准划分；若要严格复现，仍需额外依赖补充材料中的更多实现细节。",
+    "ai_reproducibility_score": 3,
+    "ai_reproducibility_confidence": 0.83,
+    "ai_reproducibility_reason": "可复现性中等。优点是论文给出了数据构成、主要架构、损失函数、训练轮数、batch size、学习率和评测指标。限制在于：元数据未提供独立代码链接，论文只声明项目页与数据链接存在但本文未核验；长期镜像托管与“正式发布”属于论文中的计划性陈述；数据采集依赖特定GelSight硬件与人工流程，复刻采集成本较高。",
+    "ai_overall_score": 3.65,
+    "ai_overall_confidence": 0.84,
+    "ai_recommendation": "推荐阅读。它对视觉-触觉表示学习和触觉数据集建设有较高参考价值，尤其适合做具身感知、机器人抓取与多模态表征的研究者；但若目标是直接复现或做系统对比，需先额外核验项目页、数据可得性与实现细节。",
+    "ai_summary_short": "论文提出Touch and Go，一个由人类在真实室内外环境中采集的视觉-触觉配对数据集，包含约13.9k次触碰和约3971个物体实例，并在自监督表征学习、触觉驱动图像风格化和未来触觉预测三项任务上验证其价值。核心亮点是数据多样性与跨任务适用性；主要短板是方法创新有限、资源可用性仅停留在论文声明层面且未在本文本中得到外部核验。",
+    "ai_difficulty": "medium",
+    "ai_math_level": "medium",
+    "ai_code_level": "medium",
+    "ai_estimated_reading_priority": 4,
+    "sections": {
+      "problem": "现有视觉-触觉数据集多来自机器人实验台或仿真环境，场景窄、对象少、材料与微观几何变化不足，限制了能够泛化到真实世界的视觉-触觉表征学习。论文试图用人类在自然环境中的采集来扩大数据多样性，并验证这种数据是否能支撑多类跨模态学习任务。",
+      "contributions": [
+        "提出Touch and Go数据集：由人类使用GelSight与普通摄像头同步采集真实世界视觉-触觉数据，覆盖室内外场景与20类材料。",
+        "给出数据标注与整理流程，包括触碰区间检测、材料标注、数据统计与附录中的datasheet说明。",
+        "将数据集用于三类任务：视觉-触觉自监督表征学习、触觉驱动图像风格化、未来触觉预测。",
+        "展示 learned tactile features 可迁移到机器人抓取成功预测，并显示视觉输入能提升未来触觉预测质量。"
+      ],
+      "method": "数据层面，作者让两名采集者协作：一人用GelSight按压物体，一人录制近似第一视角视频，并对触碰帧做检测与材料标注。建模层面，自监督学习采用CMC式双向对比损失来对齐视觉与触觉嵌入；风格化任务基于CUT，引入视觉-触觉判别器与结构保持损失；未来触觉预测则采用双编码器的3D卷积视频预测模型，将视觉与触觉特征拼接后解码预测后续触觉帧。",
+      "experiments": "实验分三部分。1）表征学习：在作者数据上预训练后，在线性探测下评估材料类别、软硬、粗糙/平滑识别，并迁移到Calandra等人的机器人抓取成功预测任务。2）触觉驱动风格化：将测试集图像与随机触觉样本配对，用CMC相似度和材料预测一致率评估，并与CycleGAN变体和未风格化基线比较。3）未来触觉预测：在skip 3和skip 5两种时间跨度下，对比只用触觉与同时用视觉+触觉两种输入，并使用L1、SSIM、LPIPS评估。",
+      "results": "结果显示，基于Touch and Go学到的视觉-触觉CMC特征在抓取成功率、材料分类、软硬分类和粗糙/平滑分类上均优于ImageNet监督特征及若干他数据集预训练特征；其中100%类别训练时抓取准确率78.1%，高于ImageNet的73.0%。在风格化任务中，作者方法优于CycleGAN变体与原图基线。未来触觉预测中，引入视觉输入在两种时间跨度和两类视频预测骨干上都带来一致提升，且较长时间跨度下收益更明显。",
+      "limitations": "论文明确承认数据主要采自密歇根大学附近，地理覆盖有限，人工选择按压位置与力度也会引入偏差；未使用独立力传感器，实例数部分是外推估计。方法上，多个模型主要是对现有框架的适配。资源方面，只能从论文文本确认作者声明存在项目页、数据链接和提帧脚本；这些公开资源、链接可用性、正式发布状态和长期托管情况在本文本内无法被外部核验，且部分属于论文当时的未来计划。"
+    },
+    "version_change_note": "当前版本 v2。",
+    "ai_analysis_provider": "codex",
+    "ai_analysis_model": "gpt-5.4",
+    "ai_analysis_profile": "full_analysis",
+    "ai_analysis_prompt_version": "paper-analysis-v2",
+    "ai_analyzed_at": "2026-07-19T09:52:48+08:00"
+  }
+}
