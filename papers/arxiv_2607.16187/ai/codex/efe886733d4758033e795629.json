@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2607.16187",
+  "extensions": {},
+  "analysis_id": "efe886733d4758033e795629",
+  "identity": {
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "profile": "full_analysis",
+    "prompt_version": "paper-analysis-v3",
+    "analysis_schema_version": 1,
+    "source_content_hash": "6af1ed342a930840af3eb6a2e9ab44ee0718c8f2cb53c65373c23c279b262b75"
+  },
+  "analyzed_at": "2026-07-20T12:48:19+08:00",
+  "created_at": "2026-07-20T12:48:19+08:00",
+  "publisher": "",
+  "status": "complete",
+  "analysis": {
+    "ai_analysis_status": "complete",
+    "ai_relevance_score": 5.0,
+    "ai_relevance_reason": "该工作直接面向 embodied intelligence/robot learning：核心是一个可在 Dexterous-Hand 与 Humanoid 两种 embodiment 间切换的 27-DoF 实体平台，并围绕 dexterous manipulation、humanoid locomotion、teleoperation、imitation learning、reinforcement learning 和长时程 cross-embodiment 执行展开。",
+    "ai_topic_primary": "Dexterous Manipulation",
+    "ai_topics": [
+      "Dexterous Manipulation",
+      "Contact Rich Manipulation",
+      "Imitation Learning",
+      "Diffusion Policy",
+      "Reinforcement Learning",
+      "Teleoperation"
+    ],
+    "ai_method_family": [
+      "robot mechanism design",
+      "teleoperation",
+      "imitation learning",
+      "Diffusion Policy",
+      "reinforcement learning",
+      "ZMP gait planning",
+      "inverse kinematics",
+      "keyframe motion authoring"
+    ],
+    "ai_task_types": [
+      "dexterous grasping",
+      "in-hand reorientation",
+      "VR teleoperation",
+      "humanoid walking",
+      "velocity-conditioned locomotion",
+      "whole-body motion playback",
+      "long-horizon embodiment switching task"
+    ],
+    "ai_robot_platforms": [
+      "Handroid",
+      "Franka Research 3"
+    ],
+    "ai_datasets": [
+      "100 teleoperated grasp demonstrations across 10 objects"
+    ],
+    "ai_baselines": [],
+    "ai_novelty_score": 4,
+    "ai_novelty_confidence": 0.86,
+    "ai_novelty_reason": "新意主要在系统层面而非单一学习算法：作者把同一套 27-DoF electromechanical body 重构为 Dexterous-Hand 与 Humanoid，并用共享 sensing/control/learning stack 贯通两种 embodiment。这种“shared morphology + embodiment switching + cross-embodiment task”组合较少见。但具体控制模块多建立在已有方法之上，如 Diffusion Policy、PPO、ZMP preview control、Mink IK，因此算法新颖性不是最强项。",
+    "ai_completeness_score": 4,
+    "ai_completeness_confidence": 0.82,
+    "ai_completeness_reason": "论文覆盖较完整：给出结构设计、电气架构、控制栈、appendix 中的 teleoperation/grasping/RL/gait 细节，并报告真实抓取、手内重定向、仿真 locomotion、真实 keyframe 动作和长时程双形态任务。缺口在于：真实 humanoid locomotion 主要是定性展示，缺少更系统的真实世界定量指标；文中虽声称 open-source，但提供的元数据中 code_url 为空，正文也未给出可核验的代码仓库、CAD/BOM、装配文件或训练超参数全集。",
+    "ai_reproducibility_score": 3,
+    "ai_reproducibility_confidence": 0.84,
+    "ai_reproducibility_reason": "可复现性中等。优点是：硬件 DoF 映射、执行器型号、电气模块、奖励形式、观测组成、关键控制接口和部分参数均有说明。限制是：缺少可核验的代码仓库链接；元数据中的 dataset_url 为空；抓取数据集是论文内构建的 100 demonstrations 而非公开标准集；真实系统装配、CAD、BOM、标定、训练时长、超参数、sim-to-real 配置和 long-horizon 编排细节未充分公开。论文中的“design and open-source Handroid”目前只能视为文内声明，无法从提供材料确认公开资源已可用。",
+    "ai_overall_score": 3.65,
+    "ai_overall_confidence": 0.84,
+    "ai_recommendation": "推荐阅读。若你关注可重构形态机器人、手与人形体之间的统一平台、或 cross-embodiment robot learning，这篇系统论文很有参考价值；但若你的重点是强定量对比、可直接复现实验包或全套开源资源，当前证据仍不充分。",
+    "ai_summary_short": "Handroid 提出一个 27-DoF 桌面级双形态机器人，可在 Dexterous-Hand 与 Humanoid 之间重构，并以统一控制与学习栈支持 teleoperation、Diffusion Policy 抓取、RL 手内重定向、humanoid locomotion 和长时程跨形态任务。",
+    "ai_difficulty": "hard",
+    "ai_math_level": "medium",
+    "ai_code_level": "high",
+    "ai_estimated_reading_priority": 5,
+    "sections": {
+      "problem": "论文关注一个长期被分离的问题：dexterous hand 擅长物体尺度的接触丰富操作，但缺乏移动与全身交互；humanoid 擅长全身运动与环境交互，但手部往往不够灵巧。作者试图回答：能否把 morphology 视为可复用资源，而不是固定在单一机器人上的属性，从而让同一物理系统兼具手部精细操作与 humanoid 运动能力。",
+      "contributions": [
+        "提出 Handroid：一个 27-DoF、0.33 m、2.05 kg 的桌面级双形态机器人，可在 Dexterous-Hand 与 Humanoid 两种 embodiment 间通过两个 prismatic joints 完成重构。",
+        "构建统一控制与学习栈，覆盖 Apple Vision Pro teleoperation、object-conditioned Diffusion Policy grasping、PPO-based in-hand reorientation、ZMP+LIPM+LQR preview control 引导的 RL tracking、reference-free RL velocity control，以及基于 Viser 的 keyframe motion authoring。",
+        "通过真实世界 dexterous manipulation、仿真 locomotion、真实 keyframe 动作和长时程 cross-embodiment 任务验证平台，展示 morphology reuse 对 integrated mobility and manipulation 的潜力。"
+      ],
+      "method": "硬件上，Handroid 将五个手指模块映射为 humanoid 的 head、arms、legs，并通过共享 base/hip 与两个线性滑动机构完成形态切换。感知与控制上，系统使用 Dynamixel actuator、ESP32-S3、IMU、Wi-Fi 通信和统一 position-target interface。学习与控制分两支：手形态分支包括 Vision Pro + AnyTeleop/DexPilot 风格 retargeting、以 PointNet++ 编码物体点云并结合 proprioception 的 Diffusion Policy 抓取、以及在 IsaacLab 中用 PPO 训练的 cube reorientation；人形分支包括由 ZMP planner、固定高度 LIPM、LQR preview control 和 Mink IK 生成参考轨迹的 RL tracking，以及直接依据期望平面速度与 yaw rate 训练的 reference-free RL velocity control；此外还提供基于 Viser 的 keyframe 编辑器用于直接动作播放或作为 tracking reference。",
+      "experiments": "实验围绕三个问题展开。Q1 检验同一重构机体能否保留 dexterous hand 能力：作者展示多种 teleoperation 任务，使用 10 个物体、每个 10 条 demonstration、共 100 条演示训练 grasping policy，并在真实系统上测试 cube in-hand reorientation。Q2 检验 humanoid 形态下的 locomotion 与全身交互：在 MuJoCo 中评估 reference-tracking 与 velocity-control 两类 RL 策略，并在真实机器人上通过 keyframe 动作展示 walking、turning、squatting、push-up、pull-up 和 pick-and-place。Q3 检验双形态是否扩展任务空间：作者设计长时程任务，包含从 Franka 脱离、切换为 humanoid、绕障行走和推箱、再切回 hand 并重新对接 Franka，最终完成抓取与放置。",
+      "results": "量化结果中，真实抓取在 10 个物体上的平均成功率为 72%；仿真 RL tracking 达到 0.12 rad 的 joint-position tracking error 和 0.0019 m 的 body-position tracking error；reference-free velocity policy 在命令前向速度 0.20 m/s 时达到 0.052 m/s 的速度跟踪误差。手内 cube reorientation、真实 humanoid keyframe 动作以及长时程 cross-embodiment 任务主要以定性结果呈现，论文声称这些实验表明平台可以在同一物理系统上贯通精细操作、locomotion、重构、对接与再操作。",
+      "limitations": "作者明确指出这是 dual-embodiment robot learning 的初步探索，当前仍受线缆干扰，未来希望通过 wireless operation 减少扰动并支持更长移动任务；进一步的小型化有助于提升 Dexterous-Hand 形态；增加 fingertip cameras 与 tactile sensing 既能改善接触操作，也能服务 foot-ground contact estimation。基于论文本身还可看到两点现实限制：真实 humanoid locomotion 缺少系统定量评测，且 open-source、CAD/BOM、代码与数据资源未在提供材料中得到可核验确认。"
+    },
+    "version_change_note": "当前版本 v1。",
+    "ai_analysis_provider": "codex",
+    "ai_analysis_model": "gpt-5.4",
+    "ai_analysis_profile": "full_analysis",
+    "ai_analysis_prompt_version": "paper-analysis-v3",
+    "ai_analyzed_at": "2026-07-20T12:48:19+08:00",
+    "ai_topic_links": [
+      "[[20 Topics/Dexterous-Manipulation|Dexterous Manipulation]]",
+      "[[20 Topics/Contact-Rich-Manipulation|Contact Rich Manipulation]]",
+      "[[20 Topics/Imitation-Learning|Imitation Learning]]",
+      "[[20 Topics/Diffusion-Policy|Diffusion Policy]]",
+      "[[20 Topics/Reinforcement-Learning|Reinforcement Learning]]",
+      "[[20 Topics/Teleoperation|Teleoperation]]"
+    ],
+    "ai_method_links": [
+      "[[20 Topics/Methods/robot-mechanism-design|robot mechanism design]]",
+      "[[20 Topics/Methods/teleoperation|teleoperation]]",
+      "[[20 Topics/Methods/imitation-learning|imitation learning]]",
+      "[[20 Topics/Methods/Diffusion-Policy|Diffusion Policy]]",
+      "[[20 Topics/Methods/reinforcement-learning|reinforcement learning]]",
+      "[[20 Topics/Methods/ZMP-gait-planning|ZMP gait planning]]",
+      "[[20 Topics/Methods/inverse-kinematics|inverse kinematics]]",
+      "[[20 Topics/Methods/keyframe-motion-authoring|keyframe motion authoring]]"
+    ],
+    "ai_dataset_links": [
+      "[[20 Topics/Datasets/100-teleoperated-grasp-demonstrations-across-10-objects|100 teleoperated grasp demonstrations across 10 objects]]"
+    ],
+    "ai_related_papers": [
+      "[[10 Papers/2026/2607.14021|Industrial Dexterity Benchmark: A Hardware-Software Benchmarking Platform for Industrial Dexterous Manipulation]]",
+      "[[10 Papers/2023/2309.12300|See to Touch: Learning Tactile Dexterity through Visual Incentives]]",
+      "[[10 Papers/2024/2410.24164|$π_0$: A Vision-Language-Action Flow Model for General Robot Control]]",
+      "[[10 Papers/2026/2603.05754|Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation]]",
+      "[[10 Papers/2026/2606.11184|TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation]]",
+      "[[10 Papers/2018/1810.10191|Making Sense of Vision and Touch: Self-Supervised Learning of Multimodal Representations for Contact-Rich Tasks]]",
+      "[[10 Papers/2023/2304.13705|Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware]]",
+      "[[10 Papers/2024/2406.09246|OpenVLA: An Open-Source Vision-Language-Action Model]]"
+    ]
+  }
+}
