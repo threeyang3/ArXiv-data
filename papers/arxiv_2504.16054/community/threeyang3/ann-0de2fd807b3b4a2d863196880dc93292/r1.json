@@ -1,0 +1,25 @@
+{
+  "type": "paperflow-community-contribution",
+  "community_data_schema_version": 1,
+  "contribution_id": "ann-0de2fd807b3b4a2d863196880dc93292",
+  "revision": 1,
+  "supersedes": "",
+  "paper_uid": "arxiv:2504.16054",
+  "creator": "threeyang3",
+  "kind": "passage-comment",
+  "body": "PaperFlow 社区评论发布与订阅往返验收：π0.5 展示了开放世界泛化的关键设计。",
+  "tags": [],
+  "rating": null,
+  "anchor": {
+    "pdf_version": 1,
+    "pdf_sha256": "6a1029fd8ab6944b74cf22f5e5d30e60bc15699d964b2900af799b807a34b64c",
+    "page": 1,
+    "exact_quote": ": a Vision-Language-Action Model with Open-World Generalization",
+    "prefix": "",
+    "suffix": ""
+  },
+  "license": "CC-BY-4.0",
+  "created_at": "2026-07-22T12:05:13+08:00",
+  "content_sha256": "3d8627bc9a5a39862e98d473b3133620898e633ad110efcf8f1a357a4acc184f",
+  "extensions": {}
+}

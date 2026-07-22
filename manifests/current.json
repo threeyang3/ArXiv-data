@@ -1,7 +1,10 @@
 {
   "analysis_count": 32,
-  "application_version": "1.4.0",
-  "feed_schema_version": 1,
-  "generated_at": "2026-07-20T12:52:23.730425+08:00",
+  "application_version": "1.5.0",
+  "community_contribution_count": 2,
+  "community_review_count": 0,
+  "contributor_count": 1,
+  "feed_schema_version": 2,
+  "generated_at": "2026-07-22T12:07:35.296016+08:00",
   "paper_count": 32
 }

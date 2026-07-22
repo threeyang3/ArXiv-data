@@ -1,0 +1,25 @@
+{
+  "type": "paperflow-community-contribution",
+  "community_data_schema_version": 1,
+  "contribution_id": "ann-3a5a561fdf4c420d93a9235fddfb1047",
+  "revision": 1,
+  "supersedes": "",
+  "paper_uid": "arxiv:2504.16054",
+  "creator": "threeyang3",
+  "kind": "highlight",
+  "body": "PaperFlow PDF++ 可视化标注验收测试，可在确认后保留或删除。",
+  "tags": [],
+  "rating": null,
+  "anchor": {
+    "pdf_version": 1,
+    "pdf_sha256": "6a1029fd8ab6944b74cf22f5e5d30e60bc15699d964b2900af799b807a34b64c",
+    "page": 1,
+    "exact_quote": ": a Vision-Language-Action Model with Open-World Generalization",
+    "prefix": "",
+    "suffix": ""
+  },
+  "license": "CC-BY-4.0",
+  "created_at": "2026-07-21T19:02:09+08:00",
+  "content_sha256": "bc8ba5ac90abddf11018471799abbae1fb8d155a64a6286a56e91c9bb35a5f57",
+  "extensions": {}
+}
