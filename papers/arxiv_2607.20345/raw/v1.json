@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2607.20345",
+  "extensions": {},
+  "source": "arxiv",
+  "source_id": "2607.20345",
+  "source_version": 1,
+  "metadata": {
+    "paper_uid": "arxiv:2607.20345",
+    "paper_source": "arxiv",
+    "paper_arxiv_id": "2607.20345",
+    "paper_arxiv_version": 1,
+    "paper_doi": "",
+    "paper_title": "Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids",
+    "paper_authors": [
+      "Roger Sala Sisó",
+      "Tiago Silvério",
+      "Jakob Sand",
+      "Tran Nguyen Le"
+    ],
+    "paper_first_author": "Roger Sala Sisó",
+    "paper_year": 2026,
+    "paper_submitted_date": "2026-07-22",
+    "paper_updated_date": "2026-07-22",
+    "paper_published_venue": "",
+    "paper_primary_category": "cs.RO",
+    "paper_categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "paper_abstract": "Closing the gap between benchmark performance and reliable real-world operation remains a central challenge for Vision-Language-Action (VLA) humanoid robots, which must handle execution errors, distribution shifts, and environmental variability. This paper presents DEED (Data-Efficient Post-Training and Experience-Driven Learning), a systems-level approach evaluated on a supermarket chip-restocking task using a Unitree G1-Edu humanoid robot and the GR00T N1.6 foundation model. DEED comprises three key components: (1) a data-efficient post-training pipeline with control-frequency alignment, data curation, task-relevant visual highlighting, and reduced VLA dependence; (2) a real-world study of experience-driven refinement, adapted from RECAP via a text-based advantage prefix and a vision-language value function; and (3) a latent-space analysis tool for studying in- and out-of-distribution behavior. Our results suggest that bridging the lab-to-store gap is primarily a systems integration challenge rather than an architectural one: careful data design and targeted post-training can transform a policy that fails under naive fine-tuning into a competent real-world system using only a single GPU.",
+    "paper_pdf_url": "https://arxiv.org/pdf/2607.20345v1",
+    "paper_abs_url": "https://arxiv.org/abs/2607.20345v1",
+    "paper_project_url": "",
+    "paper_code_url": "",
+    "paper_dataset_url": "",
+    "paper_title_display": "Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids",
+    "paper_citation_ids": [
+      "arxiv:2503.14734",
+      "arxiv:2505.17389",
+      "arxiv:2505.22159",
+      "arxiv:2509.07953",
+      "arxiv:2509.24768",
+      "arxiv:2511.11298",
+      "arxiv:2511.14759",
+      "arxiv:2601.15541",
+      "arxiv:2605.24931",
+      "arxiv:2607.20345"
+    ],
+    "paper_cites": [
+      "[[10 Papers/2024/π_0-A-Vision-Language-Action-Flow-Model-for-General-Robot-Control-2410.24164|$π_0$: A Vision-Language-Action Flow Model for General Robot Control]]"
+    ],
+    "paper_short_title": "Closing the Lab-to-Store Gap"
+  },
+  "source_license": "",
+  "source_response": {},
+  "pdf_sha256": "a69631b5b009666d4a45cf3fc23092a582b5efab0e2f3db340f66cd986131aab",
+  "extracted_text_sha256": ""
+}
