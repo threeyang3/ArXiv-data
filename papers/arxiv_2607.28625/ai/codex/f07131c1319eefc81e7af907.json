@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "paper_uid": "arxiv:2607.28625",
+  "extensions": {},
+  "analysis_id": "f07131c1319eefc81e7af907",
+  "identity": {
+    "provider": "codex",
+    "model": "gpt-5.4",
+    "profile": "full_analysis",
+    "prompt_version": "paper-analysis-v3",
+    "analysis_schema_version": 1,
+    "source_content_hash": "21fc475d454efd01d3d3adb8b0a449e6a234d2ecad93b83c5e0136c376d30988"
+  },
+  "analyzed_at": "2026-08-02T16:14:44+08:00",
+  "created_at": "2026-08-02T16:14:44+08:00",
+  "publisher": "",
+  "status": "complete",
+  "analysis": {
+    "ai_analysis_status": "complete",
+    "ai_relevance_score": 5.0,
+    "ai_relevance_reason": "论文直接针对具身智能与机器人学习中的核心瓶颈：缺少在真实家庭场景中、跨视角跨模态且时空对齐的人类示范数据。它同时覆盖 ego/exo 视觉、人体与手部运动、物体 6-DoF、音频、触觉和长时程任务，并通过分层 benchmark 对 imitation learning、world model、VLA 等上游能力形成直接支撑，因此与 embodied intelligence 高度直接相关。",
+    "ai_topic_primary": "Embodied Intelligence",
+    "ai_topics": [
+      "Embodied Intelligence",
+      "Tactile Sensing",
+      "Vision Language Action",
+      "World Models",
+      "Imitation Learning",
+      "Dexterous Manipulation",
+      "Reinforcement Learning"
+    ],
+    "ai_method_family": [
+      "多模态数据采集系统",
+      "数据集构建",
+      "时空同步与标定",
+      "层级化基准评测",
+      "运动捕捉与物体跟踪"
+    ],
+    "ai_task_types": [
+      "数据集构建",
+      "基准评测",
+      "触觉预测",
+      "人体运动估计",
+      "手部运动重建",
+      "跨视角分析"
+    ],
+    "ai_robot_platforms": [],
+    "ai_datasets": [
+      "ACE-Data-0"
+    ],
+    "ai_baselines": [
+      "PressureVision",
+      "EgoPressureDiff",
+      "TouchAnything",
+      "Multi-HMR",
+      "Multi-HMR2",
+      "SAM-3D-Body",
+      "PyMAF-X",
+      "PARE",
+      "CameraHMR",
+      "OSX",
+      "SMPLer-X",
+      "SMPLest-X",
+      "Humans-in-4D",
+      "GVHMR",
+      "WHAM",
+      "EasyMoCap",
+      "Phy-SIC",
+      "UniSH",
+      "JOSH",
+      "Human3R",
+      "MAMMA",
+      "U-HMR",
+      "HSfM",
+      "EgoEgo",
+      "EgoAllo",
+      "WildHands",
+      "Dyn-HaMR",
+      "HaWoR",
+      "HORT",
+      "HaMeR",
+      "HaPTIC",
+      "WiLoR",
+      "OmniHands"
+    ],
+    "ai_novelty_score": 4,
+    "ai_novelty_confidence": 0.87,
+    "ai_novelty_reason": "新意主要在数据引擎与采集范式上，而非新学习算法。论文把真实家庭环境中的双尺度采集（table-scale 与 room-scale）、统一时空标定、ego/exo 同步观察、人体/手/物体运动、音频与触觉联合到同一条时间线上，并把它组织成面向具身感知与 robot learning 的层级 benchmark。相较已有数据集，触觉与家居长时程任务的联合覆盖尤其突出；但从研究形态看，它更像高质量系统与数据工程创新，因此不给到满分。",
+    "ai_completeness_score": 5,
+    "ai_completeness_confidence": 0.89,
+    "ai_completeness_reason": "论文结构完整，覆盖动机、相关工作、硬件配置、同步与标定、采集流程、任务设计、统计、标注体系、分层 benchmark、局限性与伦理说明，并对 30 余个代表性方法进行了系统评测。问题定义、数据来源、标注生成逻辑和实验指标都讲得比较清楚。少量未完成之处是 object pose benchmark 被留到 future work，且公开发布细则没有在正文中完全展开。",
+    "ai_reproducibility_score": 3,
+    "ai_reproducibility_confidence": 0.81,
+    "ai_reproducibility_reason": "可复现性中等。优点是论文详细给出硬件列表、同步策略、标定流程、任务设置、评测指标与 baseline 使用方式；正文还明确给出 Project Page 与 Hugging Face 数据集页面，属于作者在论文中声明的公开资源。缺点是未给出代码仓库 URL，采集依赖专用硬件与复杂现场搭建，Gemini 文本标注和人工校验流程也缺少可执行细节；此外，数据开放范围、处理脚本和 benchmark 代码是否完整可得，无法仅从本文确认。",
+    "ai_overall_score": 3.95,
+    "ai_overall_confidence": 0.85,
+    "ai_recommendation": "推荐重点阅读。这是一篇高价值的具身智能数据论文，特别适合关注家居场景、长时程 HOI、跨模态监督、human-to-robot transfer 或 world model/VLA 训练数据的人。若你更关心新模型算法本身，它的价值主要在数据与评测基础设施，而不是方法创新。",
+    "ai_summary_short": "ACE-Data-0 提出一个面向真实家庭场景的双尺度 Ambient Capture Engine，并构建包含 ego/exo 视频、人体/手/物体运动、音频与触觉的 150 小时同步长时程具身数据集，同时建立从触觉预测到人体与手部运动估计的层级 benchmark，显示现有方法在接触、遮挡、egomotion 和长时程任务下仍有明显缺口。",
+    "ai_difficulty": "hard",
+    "ai_math_level": "low",
+    "ai_code_level": "low",
+    "ai_estimated_reading_priority": 5,
+    "sections": {
+      "problem": "论文要解决的是具身智能训练数据的根本缺口：现有数据集通常只覆盖第一人称或第三人称、只覆盖局部操作或全身运动、只给视觉而缺少触觉/音频/物体状态，且往往不在真实家庭中长时程同步记录，导致完整 perception-action loop 无法被观测和学习。",
+      "contributions": [
+        "提出 Ambient Capture Engine (ACE)，把真实家庭环境改造成可进行时空对齐多模态采集的“human-centric ambient capture”数据引擎。",
+        "设计双尺度采集配置：table-scale 用于细粒度手物操作，room-scale 用于整屋全身运动、移动与家居交互。",
+        "构建 ACE-Data-0：150 小时、17M 视频帧、200 任务类别、50 名参与者、2 个环境、75,000 个 interaction episodes。",
+        "提供统一对齐的多模态监督，包括 egocentric/exocentric video、body/hand motion、object 6-DoF、audio、tactile，以及相机标定、同步时间线、文本描述等。",
+        "建立三层 benchmark：tactile from vision、human motion estimation、hand motion estimation，并系统评测 30+ SOTA 方法。"
+      ],
+      "method": "核心方法不是单一学习模型，而是一套数据引擎。ACE 用 OptiTrack 作为统一时间参考，通过硬件触发、拍摄光学时钟、IMU 模板对齐等方式完成多设备同步；通过 ArUco 板加反光标记桥接 exocentric 相机与 mocap 世界坐标，通过 hand-eye calibration 标定移动式 egocentric rig；再结合扫描或 2D Gaussian Splatting 的物体几何、mocap suit、Manus glove、tactile glove 和多视角视频，生成共享时空坐标系中的多模态流。标注方面，除文本描述外，大多数标签都由测量信号直接投影或映射得到，而非依赖图像估计器。",
+      "experiments": "实验围绕三个层级展开。低层信号任务是从 ego-view 视频预测触觉压力，比较 PressureVision、EgoPressureDiff、TouchAnything。场景组件任务是人体运动估计，覆盖单视角 exo、时序模型、scene-aware 模型、多视角 exo 和 ego 方法，共评测 22 个 baseline。交互层任务是手部运动估计，分别在 ego-view 和 exo-view 下评测，并加入 cross-view analysis。论文使用约 10 小时保留测试集，指标包括 C-IoU、V-IoU、CoP、PA-MPJPE、MPJPE、PVE、WA-MPJPE、AUCJ、trajectory error 等。",
+      "results": "结果表明该数据集明显比现有基准更难。触觉预测上，TouchAnything 最好，但 C-IoU=0.1646、V-IoU=0.1357 仍然不高，说明视觉到压力分布映射远未解决。人体运动估计上，局部姿态误差可以做到较低，但全局轨迹恢复明显更难；scene-aware 方法更有助于房间中全局定位，而不一定改善局部关节配置。手部运动估计上，exo-view 整体优于 ego-view，尤其在 world-space trajectory 上更稳定，说明 egomotion 估计是第一人称手部重建的重要误差源。整体结论是：接触、遮挡、长时程依赖和头动/自运动，仍是现有 embodied perception 方法的主要薄弱点。",
+      "limitations": "论文明确承认三类限制：其一，仅覆盖 2 个采集场地，家庭布局、光照和陈设多样性仍有限；其二，真值只覆盖预先扫描并加标记的 instrumented objects，不包含大量未标记实体，也不细致标注 articulated mechanisms、fluid 或 deformable materials 的状态变化；其三，mocap suit、gloves、headset 和 markers 在画面中可见，可能引入数据集特有视觉偏差。另一个实际限制是系统强依赖专用硬件和复杂标定，推广成本较高。"
+    },
+    "version_change_note": "当前版本 v1。",
+    "ai_analysis_provider": "codex",
+    "ai_analysis_model": "gpt-5.4",
+    "ai_analysis_profile": "full_analysis",
+    "ai_analysis_prompt_version": "paper-analysis-v3",
+    "ai_analyzed_at": "2026-08-02T16:14:44+08:00",
+    "ai_topic_links": [
+      "[[20 Topics/Embodied-Intelligence|Embodied Intelligence]]",
+      "[[20 Topics/Tactile-Sensing|Tactile Sensing]]",
+      "[[20 Topics/Vision-Language-Action|Vision Language Action]]",
+      "[[20 Topics/World-Models|World Models]]",
+      "[[20 Topics/Imitation-Learning|Imitation Learning]]",
+      "[[20 Topics/Dexterous-Manipulation|Dexterous Manipulation]]",
+      "[[20 Topics/Reinforcement-Learning|Reinforcement Learning]]"
+    ],
+    "ai_method_links": [
+      "[[20 Topics/Methods/多模态数据采集系统|多模态数据采集系统]]",
+      "[[20 Topics/Methods/数据集构建|数据集构建]]",
+      "[[20 Topics/Methods/时空同步与标定|时空同步与标定]]",
+      "[[20 Topics/Methods/层级化基准评测|层级化基准评测]]",
+      "[[20 Topics/Methods/运动捕捉与物体跟踪|运动捕捉与物体跟踪]]"
+    ],
+    "ai_dataset_links": [
+      "[[20 Topics/Datasets/ACE-Data-0|ACE-Data-0]]"
+    ],
+    "ai_related_papers": [
+      "[[10 Papers/2026/Data-Pyramid-for-Embodied-Manipulation-2607.24744|Data Pyramid for Embodied Manipulation]]",
+      "[[10 Papers/2026/TacForeSight-2606.11184|TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation]]",
+      "[[10 Papers/2023/See-to-Touch-2309.12300|See to Touch: Learning Tactile Dexterity through Visual Incentives]]",
+      "[[10 Papers/2024/π_0-A-Vision-Language-Action-Flow-Model-for-General-Robot-Control-2410.24164|$π_0$: A Vision-Language-Action Flow Model for General Robot Control]]",
+      "[[10 Papers/2025/FAST-2501.09747|FAST: Efficient Action Tokenization for Vision-Language-Action Models]]",
+      "[[10 Papers/2025/π0.5-2504.16054|$π_{0.5}$: a Vision-Language-Action Model with Open-World Generalization]]",
+      "[[10 Papers/2026/Closing-the-Lab-to-Store-Gap-2607.20345|Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids]]",
+      "[[10 Papers/2026/JoyNexus-2607.16074|JoyNexus: Service-Oriented Multi-Tenant Post-Training for VLA Models]]"
+    ]
+  }
+}

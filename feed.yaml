@@ -4,7 +4,7 @@ name: ArXiv Data
 publisher:
   name: threeyang
   url: https://github.com/threeyang3
-generated_at: '2026-07-29T08:17:35.269162+08:00'
+generated_at: '2026-08-02T16:16:42.870880+08:00'
 minimum_reader_version: 1.4.0
 default_branch: main
 data_license: CC-BY-4.0
