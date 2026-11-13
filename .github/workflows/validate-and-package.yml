@@ -24,6 +24,8 @@ jobs:
         run: paperflow publish validate --vault . --output .
       - name: Scan public-data boundary
         run: paperflow publish scan --vault . --output .
+      - name: Advisory analysis quality review (no network)
+        run: python3 scripts/audit_quality.py
       - name: Build portable feed archive
         run: >-
           git archive
