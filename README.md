@@ -33,3 +33,7 @@ policy, and writes remote records only to the subscription cache.
 Published data records are licensed under CC BY 4.0. Paper metadata and paper
 content remain subject to their original sources and licenses. The PaperFlow
 software itself is distributed separately under the MIT License.
+
+## 质量审计与云端接入
+
+本仓库增加只读、无需 Agent CLI 的分析质量审计：`python3 scripts/audit_quality.py`。它提示历史分析中可能过时的代码／权重状态等结论，但**不会擅自改写原分析**。端到端云端发现与客户端接入的协议和边界见 [docs/cloud-workflow.md](docs/cloud-workflow.md)；目前尚未部署无人值守任务。
